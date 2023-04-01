@@ -1,11 +1,59 @@
 import mysvg from "../img/undraw_profile.svg";
 export default function Nav() {
+  function toggleSidebarsmall() {
+    document.querySelector("body").classList.toggle("sidebar-toggled");
+    document.getElementById("accordionSidebar").classList.toggle("toggled");
+  }
+
+  function removeShowClass(a) {
+    a !== "messagesDropdownid" &&
+      document
+        .querySelectorAll(".messagesDropdownid")
+        .forEach((d) => d.classList.remove("show"));
+    a !== "searchDropdownid" &&
+      document
+        .querySelectorAll(".searchDropdownid")
+        .forEach((d) => d.classList.remove("show"));
+    a !== "alertsDropdownid" &&
+      document
+        .querySelectorAll(".alertsDropdownid")
+        .forEach((d) => d.classList.remove("show"));
+    a !== "userDropdownid" &&
+      document
+        .querySelectorAll(".userDropdownid")
+        .forEach((d) => d.classList.remove("show"));
+  }
+  function alertsDropdown() {
+    removeShowClass("alertsDropdownid");
+    document
+      .querySelectorAll(".alertsDropdownid")
+      .forEach((d) => d.classList.toggle("show"));
+  }
+  function messagesDropdown() {
+    removeShowClass("messagesDropdownid");
+    document
+      .querySelectorAll(".messagesDropdownid")
+      .forEach((d) => d.classList.toggle("show"));
+  }
+  function searchDropdown() {
+    removeShowClass("searchDropdownid");
+    document
+      .querySelectorAll(".searchDropdownid")
+      .forEach((d) => d.classList.toggle("show"));
+  }
+  function userDropdown() {
+    removeShowClass("userDropdownid");
+    document
+      .querySelectorAll(".userDropdownid")
+      .forEach((d) => d.classList.toggle("show"));
+  }
   return (
     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
       {/* <!-- Sidebar Toggle (Topbar) --> */}
       <button
         id="sidebarToggleTop"
         className="btn btn-link d-md-none rounded-circle mr-3"
+        onClick={() => toggleSidebarsmall()}
       >
         <i className="fa fa-bars"></i>
       </button>
@@ -31,21 +79,25 @@ export default function Nav() {
       {/* <!-- Topbar Navbar --> */}
       <ul className="navbar-nav ml-auto">
         {/* <!-- Nav Item - Search Dropdown (Visible Only XS) --> */}
-        <li className="nav-item dropdown no-arrow d-sm-none">
+        <li
+          className="nav-item dropdown no-arrow d-sm-none searchDropdownid"
+          id="searchDropdownid"
+        >
           <a
             className="nav-link dropdown-toggle"
             href="#"
+            onClick={() => searchDropdown()}
             id="searchDropdown"
             role="button"
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false"
+            aria-expanded="true"
           >
             <i className="fas fa-search fa-fw"></i>
           </a>
           {/* <!-- Dropdown - Messages --> */}
           <div
-            className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+            className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in searchDropdownid"
             aria-labelledby="searchDropdown"
           >
             <form className="form-inline mr-auto w-100 navbar-search">
@@ -68,15 +120,19 @@ export default function Nav() {
         </li>
 
         {/* <!-- Nav Item - Alerts --> */}
-        <li className="nav-item dropdown no-arrow mx-1">
+        <li
+          className="nav-item dropdown no-arrow mx-1 alertsDropdownid"
+          id="alertsDropdown"
+        >
           <a
             className="nav-link dropdown-toggle"
             href="#"
+            onClick={() => alertsDropdown()}
             id="alertsDropdown"
             role="button"
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false"
+            aria-expanded="true"
           >
             <i className="fas fa-bell fa-fw"></i>
             {/* <!-- Counter - Alerts --> */}
@@ -84,7 +140,7 @@ export default function Nav() {
           </a>
           {/* <!-- Dropdown - Alerts --> */}
           <div
-            className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+            className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in alertsDropdownid"
             aria-labelledby="alertsDropdown"
           >
             <h6 className="dropdown-header">Alerts Center</h6>
@@ -134,15 +190,19 @@ export default function Nav() {
         </li>
 
         {/* <!-- Nav Item - Messages --> */}
-        <li className="nav-item dropdown no-arrow mx-1">
+        <li
+          className="nav-item dropdown no-arrow mx-1 messagesDropdownid"
+          id="messagesDropdownid"
+        >
           <a
             className="nav-link dropdown-toggle"
             href="#"
+            onClick={() => messagesDropdown()}
             id="messagesDropdown"
             role="button"
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false"
+            aria-expanded="true"
           >
             <i className="fas fa-envelope fa-fw"></i>
             {/* <!-- Counter - Messages --> */}
@@ -150,7 +210,7 @@ export default function Nav() {
           </a>
           {/* <!-- Dropdown - Messages --> */}
           <div
-            className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+            className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in messagesDropdownid"
             aria-labelledby="messagesDropdown"
           >
             <h6 className="dropdown-header">Message Center</h6>
@@ -236,13 +296,14 @@ export default function Nav() {
         {/* <!-- Nav Item - User Information --> */}
         <li className="nav-item dropdown no-arrow">
           <a
-            className="nav-link dropdown-toggle"
+            className="nav-link dropdown-toggle userDropdownid"
             href="#"
+            onClick={() => userDropdown()}
             id="userDropdown"
             role="button"
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false"
+            aria-expanded="true"
           >
             <span className="mr-2 d-none d-lg-inline text-gray-600 small">
               Mohan
@@ -251,7 +312,7 @@ export default function Nav() {
           </a>
           {/* <!-- Dropdown - User Information --> */}
           <div
-            className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+            className="dropdown-menu dropdown-menu-right shadow animated--grow-in userDropdownid"
             aria-labelledby="userDropdown"
           >
             <a className="dropdown-item" href="#">
