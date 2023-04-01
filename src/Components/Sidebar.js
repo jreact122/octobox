@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import myrocketsvg from "../img/undraw_rocket.svg";
 
 export default function Sidebar() {
-  function toggleSidebar(e) {
+  function toggleSidebar() {
     document.querySelector("body").classList.toggle("sidebar-toggled");
     document.getElementById("accordionSidebar").classList.toggle("toggled");
   }
@@ -187,7 +187,7 @@ export default function Sidebar() {
           <button
             className="rounded-circle border-0"
             id="sidebarToggle"
-            onClick={(e) => toggleSidebar(e)}
+            onClick={() => toggleSidebar()}
           ></button>
         </div>
 
