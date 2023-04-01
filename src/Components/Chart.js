@@ -2,7 +2,7 @@
 // // import './assets/chart-bar-demo';
 // // import './assets/chart-pie-demo';
 // // import './assets/datatables-demo';
-
+//console.log('mohan')
 // function Charts() {
 //   return (
 //     <>
