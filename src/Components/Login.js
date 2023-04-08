@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Login() {
   return (
     <div className="container">
@@ -47,38 +49,32 @@ export default function Login() {
                           </label>
                         </div>
                       </div>
-                      <a
-                        href="index.html"
+                      <Link
+                        to="/dashboard"
                         className="btn btn-primary btn-user btn-block"
                       >
                         Login
-                      </a>
+                      </Link>
                       <hr />
-                      <a
-                        href="index.html"
-                        className="btn btn-google btn-user btn-block"
-                      >
+                      <Link className="btn btn-google btn-user btn-block">
                         <i className="fab fa-google fa-fw"></i> Login with
                         Google
-                      </a>
-                      <a
-                        href="index.html"
-                        className="btn btn-facebook btn-user btn-block"
-                      >
+                      </Link>
+                      <Link className="btn btn-facebook btn-user btn-block">
                         <i className="fab fa-facebook-f fa-fw"></i> Login with
                         Facebook
-                      </a>
+                      </Link>
                     </form>
                     <hr />
                     <div className="text-center">
-                      <a className="small" href="forgot-password.html">
+                      <Link className="small" to="/forgotpassword">
                         Forgot Password?
-                      </a>
+                      </Link>
                     </div>
                     <div className="text-center">
-                      <a className="small" href="register.html">
+                      <Link className="small" to="/register">
                         Create an Account!
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,8 @@
 import mysvg from "../img/undraw_profile.svg";
+import profilesvg1 from "../img/undraw_profile_1.svg";
+import profilesvg2 from "../img/undraw_profile_2.svg";
+import profilesvg3 from "../img/undraw_profile_3.svg";
+
 export default function Nav() {
   function toggleSidebarsmall() {
     document.querySelector("body").classList.toggle("sidebar-toggled");
@@ -216,11 +220,7 @@ export default function Nav() {
             <h6 className="dropdown-header">Message Center</h6>
             <a className="dropdown-item d-flex align-items-center" href="#">
               <div className="dropdown-list-image mr-3">
-                <img
-                  className="rounded-circle"
-                  src="img/undraw_profile_1.svg"
-                  alt="..."
-                />
+                <img className="rounded-circle" src={profilesvg1} alt="..." />
                 <div className="status-indicator bg-success"></div>
               </div>
               <div className="font-weight-bold">
@@ -233,11 +233,7 @@ export default function Nav() {
             </a>
             <a className="dropdown-item d-flex align-items-center" href="#">
               <div className="dropdown-list-image mr-3">
-                <img
-                  className="rounded-circle"
-                  src="img/undraw_profile_2.svg"
-                  alt="..."
-                />
+                <img className="rounded-circle" src={profilesvg2} alt="..." />
                 <div className="status-indicator"></div>
               </div>
               <div>
@@ -250,11 +246,7 @@ export default function Nav() {
             </a>
             <a className="dropdown-item d-flex align-items-center" href="#">
               <div className="dropdown-list-image mr-3">
-                <img
-                  className="rounded-circle"
-                  src="img/undraw_profile_3.svg"
-                  alt="..."
-                />
+                <img className="rounded-circle" src={profilesvg3} alt="..." />
                 <div className="status-indicator bg-warning"></div>
               </div>
               <div>

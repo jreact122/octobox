@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function ForgotPassword() {
   return (
     <div className="container">
@@ -30,23 +31,20 @@ export default function ForgotPassword() {
                           placeholder="Enter Email Address..."
                         />
                       </div>
-                      <a
-                        href="login.html"
-                        className="btn btn-primary btn-user btn-block"
-                      >
+                      <Link className="btn btn-primary btn-user btn-block">
                         Reset Password
-                      </a>
+                      </Link>
                     </form>
                     <hr />
                     <div className="text-center">
-                      <a className="small" href="register.html">
+                      <Link className="small" to="/register">
                         Create an Account!
-                      </a>
+                      </Link>
                     </div>
                     <div className="text-center">
-                      <a className="small" href="login.html">
+                      <Link className="small" to="/login">
                         Already have an account? Login!
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

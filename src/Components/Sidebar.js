@@ -17,7 +17,7 @@ export default function Sidebar() {
         {/* <!-- Sidebar - Brand --> */}
         <Link
           className="sidebar-brand d-flex nav-link align-items-center justify-content-center"
-          to="/"
+          to="/dashboard"
         >
           <div className="sidebar-brand-icon rotate-n-15">
             <i className="fas fa-laugh-wink"></i>
@@ -32,7 +32,7 @@ export default function Sidebar() {
 
         {/* <!-- Nav Item - Dashboard --> */}
         <li className="nav-item active">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/dashboard">
             <i className="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
           </Link>
@@ -156,7 +156,7 @@ export default function Sidebar() {
               <Link className="collapse-item" to="/page404">
                 404 Page
               </Link>
-              <Link className="collapse-item" to="/blank">
+              <Link className="collapse-item" to="/">
                 Blank Page
               </Link>
             </div>

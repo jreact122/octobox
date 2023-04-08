@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Register() {
   return (
     <div className="container">
@@ -56,37 +57,28 @@ export default function Register() {
                       />
                     </div>
                   </div>
-                  <a
-                    href="login.html"
-                    className="btn btn-primary btn-user btn-block"
-                  >
+                  <Link className="btn btn-primary btn-user btn-block">
                     Register Account
-                  </a>
+                  </Link>
                   <hr />
-                  <a
-                    href="index.html"
-                    className="btn btn-google btn-user btn-block"
-                  >
+                  <Link className="btn btn-google btn-user btn-block">
                     <i className="fab fa-google fa-fw"></i> Register with Google
-                  </a>
-                  <a
-                    href="index.html"
-                    className="btn btn-facebook btn-user btn-block"
-                  >
+                  </Link>
+                  <Link className="btn btn-facebook btn-user btn-block">
                     <i className="fab fa-facebook-f fa-fw"></i> Register with
                     Facebook
-                  </a>
+                  </Link>
                 </form>
                 <hr />
                 <div className="text-center">
-                  <a className="small" href="forgot-password.html">
+                  <Link className="small" to="/forgotpassword">
                     Forgot Password?
-                  </a>
+                  </Link>
                 </div>
                 <div className="text-center">
-                  <a className="small" href="login.html">
+                  <Link className="small" to="/login">
                     Already have an account? Login!
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
