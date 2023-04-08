@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Components/Dashboard";
 import Buttons from "./Components/Buttons";
 import Cards from "./Components/Cards";
-import Footer from "./Components/Footer";
 import Colors from "./Components/Colors";
 import Borders from "./Components/Borders";
 import Animations from "./Components/Animations";
@@ -15,6 +14,7 @@ import Login from "./Components/Login";
 import Register from "./Components/Register";
 import ForgotPassword from "./Components/ForgotPassword";
 import Page404 from "./Components/Page404";
+import Blank from "./Components/Blank";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -54,6 +54,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/page404",
         element: <Page404 />,
+      },
+      {
+        path: "/blank",
+        element: <Blank />,
       },
     ],
   },

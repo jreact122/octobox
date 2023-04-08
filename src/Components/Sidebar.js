@@ -156,7 +156,7 @@ export default function Sidebar() {
               <Link className="collapse-item" to="/page404">
                 404 Page
               </Link>
-              <Link className="collapse-item" to="/">
+              <Link className="collapse-item" to="/blank">
                 Blank Page
               </Link>
             </div>
@@ -165,18 +165,18 @@ export default function Sidebar() {
 
         {/* <!-- Nav Item - Charts --> */}
         <li className="nav-item">
-          <a className="nav-link" href="charts.html">
+          <Link className="nav-link">
             <i className="fas fa-fw fa-chart-area"></i>
             <span>Charts</span>
-          </a>
+          </Link>
         </li>
 
         {/* <!-- Nav Item - Tables --> */}
         <li className="nav-item">
-          <a className="nav-link" href="tables.html">
+          <Link className="nav-link" href="tables.html">
             <i className="fas fa-fw fa-table"></i>
             <span>Tables</span>
-          </a>
+          </Link>
         </li>
 
         {/* <!-- Divider --> */}
